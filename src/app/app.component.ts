@@ -12,10 +12,13 @@ export class AppComponent {
 
   onInput(member: string) {
     this.newMemberName = member;
+    console.log(this.newMemberName);
   }
 
   addMember() {
     this.members.push(this.newMemberName);
+    this.newMemberName= "";
+    console.log(this.members);
   }
 
 }
