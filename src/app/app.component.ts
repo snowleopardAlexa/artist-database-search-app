@@ -10,8 +10,12 @@ export class AppComponent {
   newMemberName = "";
   members: string[] = [];
 
+  onInput(member: string) {
+    this.newMemberName = member;
+  }
+
   addMember() {
-    console.log("CLICKED");
+    this.members.push(this.newMemberName);
   }
 
 }

@@ -3,11 +3,15 @@
   <div>
     <h1>Team Generator</h1>
     <ul class="list">
-      <li>Freddie Mercury</li>
-      <li>David Bowie</li>
+      <li *ngFor="let member of members">{{ member }}</li>
     </ul>
     <div class="add-members-container">
-      <input type="text" placeholder="Name" />
+      <input 
+         #addMemberInput
+         type="text" 
+         placeholder="Name" 
+         (input)="onInput(addMemberInput.value)"
+      />
       <button (click)="addMember()">Add</button>
     </div>
     <div class="input-container">
