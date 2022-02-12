@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'artist-search-app';
+  // state 
+  newMemberName = "";
+  members: string[] = [];
+
+  addMember() {
+    console.log("CLICKED");
+  }
+
 }
