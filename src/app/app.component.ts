@@ -9,16 +9,20 @@ export class AppComponent {
   // state 
   newMemberName = "";
   members: string[] = [];
+  errorMessage = "";
 
   onInput(member: string) {
     this.newMemberName = member;
-    console.log(this.newMemberName);
   }
 
   addMember() {
+  
+    if (!this.newMemberName) {
+      return;
+    }
+
     this.members.push(this.newMemberName);
     this.newMemberName= "";
-    console.log(this.members);
   }
 
 }
