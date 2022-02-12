@@ -47,6 +47,8 @@ export class AppComponent {
         const randomIndex = Math.floor(Math.random() * allMembers.length);
         // print teams on the screen
         const member = allMembers.splice(randomIndex, 1)[0];
+        // remove undefined member
+        if(!member)break;
         
         if (this.teams[i]) {
           this.teams[i].push(member)
