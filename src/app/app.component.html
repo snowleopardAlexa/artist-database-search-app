@@ -23,7 +23,7 @@
         (input)="onNumberOfTeamsInput(numberOfTeamsInput.value)"
         [value]="numberOfTeams"
       />
-      <button (click)="generateTeams"
+      <button (click)="generateTeams()"
       >Generator</button>
     </div>
     <p *ngIf="errorMessage" class="error-msg">{{errorMessage}}</p>
