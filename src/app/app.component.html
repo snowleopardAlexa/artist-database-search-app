@@ -3,17 +3,23 @@
   <div>
     <h1>Team Generator</h1>
     <ul class="list">
-      <li>Freddie Mercury</li>
-      <li>David Bowie</li>
+      <li *ngFor="let member of members">{{ member }}</li>
     </ul>
     <div class="add-members-container">
-      <input type="text" placeholder="Name" />
-      <button>Add</button>
+      <input 
+         #addMemberInput
+         type="text" 
+         placeholder="Name" 
+         (input)="onInput(addMemberInput.value)"
+         [value]="newMemberName"
+      />
+      <button (click)="addMember()">Add</button>
     </div>
     <div class="input-container">
       <input type="text" placeholder="# of teams" />
       <button>Generator</button>
     </div>
+    <p *ngIf="errorMessage" class="error-msg">{{errorMessage}}</p>
   </div>
 </div>
 </div>
