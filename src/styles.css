@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "semantic-ui-css/semantic.css";
+
+/*:::::::::: FONTS :::::::::: */
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Fredoka+One&family=Mali:wght@500;600&family=Mukta:wght@300&family=Questrial&family=Share&family=Staatliches&display=swap');
+
+body {
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+
+
